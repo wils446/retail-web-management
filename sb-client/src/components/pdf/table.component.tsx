@@ -105,7 +105,8 @@ export function SkeletonTable<T extends TableDataType[]>(props: TableProps<T>) {
 										<h1
 											tw="px-2"
 											css={[
-												(!data[title] || data[title] === "blank") && tw`text-white`,
+												(!data[title as number] || data[title as string] === "blank") &&
+													tw`text-white`,
 												dataIndex === tableData.length - 1 && tw`mb-4`,
 											]}
 										>
