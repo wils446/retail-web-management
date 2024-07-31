@@ -4,7 +4,7 @@ import { DailyReportResponse, dailyReportApi } from "../api";
 type DailyReportState = DailyReportResponse;
 
 const subInitialState = {
-	counts: 0,
+	count: 0,
 	data: [],
 };
 
