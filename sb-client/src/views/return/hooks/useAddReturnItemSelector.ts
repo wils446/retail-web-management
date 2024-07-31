@@ -41,6 +41,7 @@ export const useAddReturnItemSelector = (
 		function <T extends keyof AddReturnItemState>(key: T, value: AddReturnItemState[T]) {
 			setReturnItemValue((prev) => ({ ...prev, [key]: value }));
 		},
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 		[returnItemValue]
 	);
 

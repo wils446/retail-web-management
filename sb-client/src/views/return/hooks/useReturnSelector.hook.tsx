@@ -10,5 +10,6 @@ export const useReturnSelector = () => {
 	useEffect(() => {
 		getReturns({ queryString: searchParams.toString() });
 		// getItem();
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [searchParams]);
 };
