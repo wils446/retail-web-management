@@ -1,4 +1,4 @@
-import { useAppSelector, useItem, usePromiseToast, useQueryString } from "@libs/hooks";
+import { useAppSelector, usePromiseToast, useQueryString } from "@libs/hooks";
 import {
 	CartResponse,
 	ItemResponse,
@@ -104,7 +104,7 @@ export const useAddCartItemSelector = (cart: CartResponse, closeModalFn: () => v
 
 	useEffect(() => {
 		getItems({ queryString: createQueryString("name", debouncedItemName) }).then((res) =>
-			setItemList(res.data.items)
+			setItemList(res.data?.items || [])
 		);
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [debouncedItemName]);
